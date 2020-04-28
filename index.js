@@ -37,7 +37,7 @@ function solve(stepNumber, finalValue, initx, inity, expression) {
 
     
 
-    for (let i = 1; i < stepNumber; i++) {
+    for (let i = 1; i < stepNumber + 1; i++) {
         table.push([]);
         table[i][0] = table[i-1][0] + h;
         table[i][1] = table[i-1][2];
@@ -64,7 +64,7 @@ function constructGraph(arr, max, stepNumber) {
     
     let jsonArray = [];
     for (let i = 0; i < arr.length; i++) {
-        jsonArray.push({x : arr[i][0], y : arr[i][2]});
+        jsonArray.push({x : arr[i][0], y : arr[i][1]});
     }
 
     //console.log((max / stepNumber));
